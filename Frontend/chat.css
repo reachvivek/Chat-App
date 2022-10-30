@@ -55,8 +55,8 @@ h2 {
 
 .form{
     width: 50vh;
-    position: fixed;
-    bottom: 2rem;
+    position: absolute;
+    bottom: 0;
     z-index: 999;
     background-color: #E9E9E9;
 }
@@ -77,7 +77,7 @@ h2 {
 
 .chats{
     overflow: auto;
-    max-height: 32rem;
+    max-height: 31rem;
     text-align: center;
     align-items: center;
 }
