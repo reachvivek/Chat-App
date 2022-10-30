@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Authorization - Group Chat App</title>
+  <title>Authorization - Chat App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
@@ -18,11 +18,11 @@
                 onboarded.
             </span>
             </header>
-            <input type="text" required placeholder="Name" />
-            <input type="number" required placeholder="Phone" />
-            <input type="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
-            <input type="password" required placeholder="Password" />
-            <a href="#welcome" class="app-button">Sign Up</a>
+            <input id='name-up' type="text" required placeholder="Name" />
+            <input id='phone-up' type="number" required placeholder="Phone" />
+            <input id='email-up' type="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
+            <input id='password-up' type="password" required placeholder="Password" />
+            <a id='sign-up-btn' href="#welcome" class="app-button">Sign Up</a>
             <div class="app-login">
             Already have an account? <a id='sign-in' href="#sign-in">Sign In</a>
             </div>
@@ -52,9 +52,9 @@
                 
             </span>
             </header>
-            <input type="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
-            <input type="password" required placeholder="Password" />
-            <a href="#welcome" class="app-button">Sign In</a>
+            <input id='email-in' type="email" required pattern=".*\.\w{2,}" placeholder="Email Address" />
+            <input id='password-in' type="password" required placeholder="Password" />
+            <a id='sign-in-btn' href="#welcome" class="app-button">Sign In</a>
             <div class="app-login">
             Not registered yet? <a id='sign-up'href="#sign-up">Sign Up</a>
             </div>
@@ -66,6 +66,7 @@
             </svg>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <script src="./auth.js"></script>
 </body>
 </html>
