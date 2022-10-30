@@ -1,4 +1,7 @@
+var state;
+
 const userUrl='http://localhost:3000/users'
+
 let signInFormBtn=document.getElementById('sign-in')
 let signUpFormBtn=document.getElementById('sign-up')
 let signUpBtn=document.getElementById('sign-up-btn')
@@ -8,6 +11,20 @@ signUpFormBtn.addEventListener('click', formUp)
 signInFormBtn.addEventListener('click', formIn)
 signUpBtn.addEventListener('click', signUp)
 signInBtn.addEventListener('click', signIn)
+
+//Check if already Logged In
+function checkAuthState(){
+    state=JSON.parse(sessionStorage.getItem('auth'))
+    if (state==null||state==undefined||state==''){
+        return
+    }else if(state.token){
+        location.replace('./chat.html')
+    }else{
+        return
+    }
+}
+
+checkAuthState()
 
 function formUp(){
     document.querySelector('.login-view').style.display="none"
@@ -102,6 +119,7 @@ function signIn(e){
                 }else if(response.data.code==1){
                     alert("Sign In Successful!")
                     sessionStorage.setItem('auth', JSON.stringify({token:response.data.token}))
+                    checkAuthState()
                 }
         }).catch(err=>console.log(err))
     }
