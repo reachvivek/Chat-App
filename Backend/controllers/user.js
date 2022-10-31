@@ -32,7 +32,7 @@ exports.findUser=(req, res, next)=>{
         }else{
             bcrypt.compare(creds.password, response.password).then((result)=>{
                 if(result){
-                    res.status(200).send({code:1, token:generateToken(creds.email)})
+                    res.status(200).send({code:1, token:generateToken(creds.email), userId:response.id})
                 }else{
                     res.status(200).send({code:2})
                 }

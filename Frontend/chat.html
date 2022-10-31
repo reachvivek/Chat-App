@@ -12,26 +12,14 @@
         <div class="chat-view">  
             <header class="app-header">
             <i id='logout' class="fa-solid fa-angle-left"></i>
-            <div class="chats">
-                <p class="info">You joined the chat</p>
-                <p class="message">Hi</p>
-                <p class="message">What's Up?</p>
-                <p class="message sender">Hey</p>
-                <p class="info">Ayush Maskara joined the chat</p>
-                <p class="message sender">How are you?</p>
-                <p class="message sender">I am great!</p>
-                <p class="message">All good!</p>
-                <p class="info">Shubham joined the chat </p>
-                <p class="message">I am chilling out...</p>
-                <p class="message">What have you been upto?</p>
-                <p class="message sender">Nothing much</p>
-                <p class="message sender">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis possimus ex recusandae laudantium, eius accusamus dolorem saepe aut nesciunt consequatur sapiente veniam similique maxime adipisci eaque maiores deleniti id!</p>
-                <p class="message">What have you been upto?</p>
-                <p class="message sender">What have you been upto?</p>
-            </div>
+            
+            <!-- Chats Container -->
+            <div class="chats"></div>
+
+            <!-- Chat Form -->
             <div class="form">
-                <form action="">
-                    <input type="text" placeholder="Type a message">
+                <form action="" onsubmit="return sendMessage(event)">
+                    <input id='message' type="text" placeholder="Type a message">
                     <i id='send' class="fa-solid fa-circle-arrow-up"></i>
                 </form>
             </div>

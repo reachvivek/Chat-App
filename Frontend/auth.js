@@ -118,7 +118,7 @@ function signIn(e){
                     document.getElementById('email-up').value=emailInp
                 }else if(response.data.code==1){
                     alert("Sign In Successful!")
-                    sessionStorage.setItem('auth', JSON.stringify({token:response.data.token}))
+                    sessionStorage.setItem('auth', JSON.stringify({token:response.data.token, userId:response.data.userId}))
                     checkAuthState()
                 }
         }).catch(err=>console.log(err))
