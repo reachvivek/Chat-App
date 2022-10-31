@@ -1,4 +1,5 @@
 var state;
+let allChats=[];
 const chatUrl='http://localhost:3000/chats'
 let logoutBtn=document.getElementById('logout')
 let sendBtn=document.getElementById('send')
@@ -66,6 +67,7 @@ function getChats(){
         url: chatUrl,
         headers:{'Authorization': state.token}
     }).then(response=>{
+        allChats=response.data;
         let chats=document.querySelector('.chats')
         chats.innerHTML=""
         if(response.data.length==0){
@@ -81,10 +83,24 @@ function getChats(){
                 chats.appendChild(p)
             })
         }
-        console.log(response)
+        setInterval(checkNewChats, 1000);
     }).catch(err=>console.log(err))
 }
 
+function checkNewChats(){
+    axios({
+        method:'get',
+        url: chatUrl,
+        headers:{'Authorization': state.token}
+    }).then(response=>{
+        if (response.data.length!==allChats.length){
+            getChats()
+        }
+        else{
+            return;
+        }
+    }).catch(err=>console.log(err))
+}
 
 window.addEventListener('DOMContentLoaded', ()=>{
     getChats()
