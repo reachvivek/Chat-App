@@ -6,11 +6,16 @@ let signInFormBtn=document.getElementById('sign-in')
 let signUpFormBtn=document.getElementById('sign-up')
 let signUpBtn=document.getElementById('sign-up-btn')
 let signInBtn=document.getElementById('sign-in-btn')
+let passIn=document.getElementById('password-in')
+let passUp=document.getElementById('password-up')
 
 signUpFormBtn.addEventListener('click', formUp)
 signInFormBtn.addEventListener('click', formIn)
 signUpBtn.addEventListener('click', signUp)
 signInBtn.addEventListener('click', signIn)
+
+passIn.addEventListener('keydown', (e)=>{e.code=='Enter'?signIn():null})
+passUp.addEventListener('keydown', (e)=>{e.code=='Enter'?signUp():null})
 
 //Check if already Logged In
 function checkAuthState(){
@@ -18,7 +23,7 @@ function checkAuthState(){
     if (state==null||state==undefined||state==''){
         return
     }else if(state.token){
-        location.replace('./chat.html')
+        location.replace('./groups.html')
     }else{
         return
     }
@@ -86,8 +91,6 @@ function signUp(e){
 }
 
 function signIn(e){
-    // e.preventDefault()
-
     let emailInp=document.getElementById('email-in').value
     let passInp=document.getElementById('password-in').value
 

@@ -40,3 +40,16 @@ exports.findUser=(req, res, next)=>{
         }
     }).catch(err=>console.log(err))
 }
+
+exports.getUsers=(req, res, next)=>{
+    Users.findAll().then(response=>{
+        let data=[]
+        if (response.length>0){
+            response.map(user=>{
+                let entry={id:user.id, name:user.name}
+                data.push(entry)
+            })
+        }
+        res.status(200).send(data)
+    }).catch(err=>console.log(err))
+}

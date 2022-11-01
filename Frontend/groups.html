@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./groups.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://kit.fontawesome.com/ef0c0d16c3.js" crossorigin="anonymous"></script>
+    <title>Groups - Chat App</title>
+</head>
+<body>
+    <div id="app">
+        <div class="groups-view">  
+            <div class="options">
+                <i id='back' class="fa-solid fa-arrow-left"></i>
+                <i id='logout' class="fa-solid fa-angle-left"></i>
+                <i id='create-group' class="fa-solid fa-plus"></i>
+                <i id='next' class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <!-- Create Group Popup -->
+            <div class="add-members-popup"></div>
+
+            <div class="popup">
+                <img src="./Assets/default_icon.png" alt="">
+                <input id="group-name" type="text" required placeholder="Group Name">
+                <i id='submit' class="fa-solid fa-circle-check"></i>
+
+                <svg id="svg-lines" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 284.2 152.7" xml:space="preserve">
+                <path class="st0" d="M37.7,107.3h222.6c12,0,21.8,9.7,21.8,21.7s-9.7,21.8-21.8,21.8c0,0-203.6,0-222.6,0S2.2,138.6,2.2,103.3   c0-52,113.5-101.5,141-101.5c13.5,0,21.8,9.7,21.8,21.8s-9.7,21.7-21.8,21.7s-21.8-9.7-21.8-21.7s9.7-21.8,21.8-21.8"/>
+                </svg>
+            </div>
+
+            <!-- Groups Container -->
+            <div class="groups-container"></div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="./groups.js"></script>
+</body>
+</html>
