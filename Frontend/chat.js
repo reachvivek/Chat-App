@@ -31,6 +31,8 @@ function checkAuthState(){
 checkAuthState()
 
 function goBack(){
+    localStorage.removeItem('chats')
+    localStorage.removeItem('groupId')
     sessionStorage.removeItem('groupId')
     location.replace('./groups.html')
 }

@@ -213,6 +213,7 @@ function showGroups(){
 function showChats(e){
     const groupId=e.target.id
     sessionStorage.setItem('groupId', groupId)
+    localStorage.removeItem('chats')
     location.href='./chat.html'
 }
 
