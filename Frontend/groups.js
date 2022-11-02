@@ -1,5 +1,6 @@
 var state;
 let membersAdded=[]
+let groups;
 const groupsUrl='http://localhost:3000/groups'
 const userUrl='http://localhost:3000/users'
 let logoutBtn=document.getElementById('logout')
@@ -40,6 +41,7 @@ function showAddMembersPopup(){
         url:userUrl,
         headers:{'Authorization':state.token}
     }).then(response=>{
+        addMembersPopup.innerHTML=""
         let info=document.createElement('p')
         info.className='add-info'
         info.innerHTML='Add Group Participants'
@@ -183,6 +185,11 @@ function showGroups(){
     }).then(response=>{
         let groupList=document.querySelector('.groups-container')
         groupList.innerHTML=""
+        let info=document.createElement('p')
+        info.className='add-info'
+        info.innerHTML='Groups'
+        groupList.appendChild(info)
+        groups=[...response.data]
         if(response.data.length==0){
             let p=document.createElement('p')
             p.innerHTML="No Groups Created!"
@@ -212,7 +219,10 @@ function showGroups(){
 
 function showChats(e){
     const groupId=e.target.id
+    let groupName;
+    groups.map(group=>group.id==groupId?groupName=group.name:null)
     sessionStorage.setItem('groupId', groupId)
+    sessionStorage.setItem('groupName', groupName)
     localStorage.removeItem('chats')
     location.href='./chat.html'
 }

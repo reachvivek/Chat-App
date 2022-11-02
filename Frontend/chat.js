@@ -15,7 +15,7 @@ function checkAuthState(){
     state=JSON.parse(sessionStorage.getItem('auth'))
     group=sessionStorage.getItem('groupId')
     if (state==null||state==undefined||state==''){
-        location.replace('./auth.html')
+        location.replace('./index.html')
     }else if(state.token){
         if(group==null||group==undefined||group==''){
             location.replace('./groups.html')
@@ -24,7 +24,7 @@ function checkAuthState(){
             return
         }
     }else{
-        location.replace('./auth.html')
+        location.replace('./index.html')
     }
 }
 
@@ -158,7 +158,27 @@ function getChats(){
     }
 }
 
+function setHeader(){
+    let header=document.querySelector('.chat-desc')
+    header.id=group
+    let img=document.createElement('img')
+    img.src="./Assets/default_icon.png"
+    img.id=group
+    header.appendChild(img)
+    let p=document.createElement('p')
+    p.innerHTML=sessionStorage.getItem('groupName')
+    p.id=group
+    header.appendChild(p)
+    header.addEventListener('click', manageGroup)
+}
+
+function manageGroup(e){
+    console.log(e.target.id)
+    location.href='./manage.html'
+}
+
 window.addEventListener('DOMContentLoaded', ()=>{
+    setHeader()
     setInterval(getChats, 1000)
     checkInput()
 })

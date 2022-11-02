@@ -16,7 +16,12 @@ const Groups=sequelize.define('groups', {
     members:{
         type:Sequelize.TEXT,
         allowedNull:false
+    },
+    admins:{
+        type:Sequelize.TEXT,
+        allowedNull:false
     }
+
 })
 
 module.exports=Groups;

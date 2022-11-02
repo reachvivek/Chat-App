@@ -21,8 +21,31 @@ body {
     background: #1b212c;
 }
 
+.chat-header{
+    display: flex;
+    flex-direction: row;
+    z-index: 9999;
+    width: 52vh;
+}
+
+.chat-desc{
+    background-color: #F0f2f2;
+    display: flex;
+    flex-direction: row;
+    border-radius: 2rem;
+    width: 32vh;
+    margin: 0.2rem 1.6rem;
+    cursor: pointer;
+}
+
+.chat-desc img{
+    margin: .3rem .5rem;
+    width: 2.5rem;
+}
+
 .chat-view{
     font-family: Lato, sans-serif;
+    flex-direction: column;
     display: flex;
     position: absolute;
     top: 0;
@@ -125,7 +148,7 @@ h2 {
 #back{
     cursor: pointer;
     font-size: 1.6rem;
-    margin: 0.4rem .4rem;
+    margin: .7rem .4rem;
 }
 
 input:focus{
