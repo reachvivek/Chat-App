@@ -1,6 +1,6 @@
 var state;
 
-const userUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/users'
+const userUrl='https://postgres-chat-app.herokuapp.com/users'
 
 let signInFormBtn=document.getElementById('sign-in')
 let signUpFormBtn=document.getElementById('sign-up')

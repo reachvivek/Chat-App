@@ -1,10 +1,10 @@
 var state, group;
-const groupsUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/group'
-const addAdmin='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/addAdmin'
-const removeAdmin='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/removeAdmin'
-const removeUser='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/removeUser'
-const addUsers='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/addUsers'
-const userUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/users'
+const groupsUrl='https://postgres-chat-app.herokuapp.com/group'
+const addAdmin='https://postgres-chat-app.herokuapp.com/addAdmin'
+const removeAdmin='https://postgres-chat-app.herokuapp.com/removeAdmin'
+const removeUser='https://postgres-chat-app.herokuapp.com/removeUser'
+const addUsers='https://postgres-chat-app.herokuapp.com/addUsers'
+const userUrl='https://postgres-chat-app.herokuapp.com/users'
 let backBtn=document.getElementById('back')
 let nextBtn=document.getElementById('next')
 let members, popup, elem;

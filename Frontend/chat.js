@@ -1,6 +1,6 @@
 var state, group;
 let allChats;
-const chatUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/chats'
+const chatUrl='https://postgres-chat-app.herokuapp.com/chats'
 let backBtn=document.getElementById('back')
 let sendBtn=document.getElementById('send')
 let messageInp=document.getElementById('message')
