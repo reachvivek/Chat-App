@@ -1,10 +1,10 @@
 var state, group;
-const groupsUrl='http://localhost:3000/group'
-const addAdmin='http://localhost:3000/addAdmin'
-const removeAdmin='http://localhost:3000/removeAdmin'
-const removeUser='http://localhost:3000/removeUser'
-const addUsers='http://localhost:3000/addUsers'
-const userUrl='http://localhost:3000/users'
+const groupsUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/group'
+const addAdmin='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/addAdmin'
+const removeAdmin='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/removeAdmin'
+const removeUser='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/removeUser'
+const addUsers='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/addUsers'
+const userUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/users'
 let backBtn=document.getElementById('back')
 let nextBtn=document.getElementById('next')
 let members, popup, elem;

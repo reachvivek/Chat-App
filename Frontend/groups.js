@@ -1,8 +1,8 @@
 var state;
 let membersAdded=[]
 let groups;
-const groupsUrl='http://localhost:3000/groups'
-const userUrl='http://localhost:3000/users'
+const groupsUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/groups'
+const userUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/users'
 let logoutBtn=document.getElementById('logout')
 let createBtn=document.getElementById('create-group')
 let backBtn=document.getElementById('back')

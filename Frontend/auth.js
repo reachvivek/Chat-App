@@ -1,6 +1,6 @@
 var state;
 
-const userUrl='http://localhost:3000/users'
+const userUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/users'
 
 let signInFormBtn=document.getElementById('sign-in')
 let signUpFormBtn=document.getElementById('sign-up')
@@ -42,7 +42,7 @@ function formIn(){
 }
 
 function signUp(e){
-    e.preventDefault()
+    // e.preventDefault()
     let nameInp=document.getElementById('name-up').value
     let phoneInp=document.getElementById('phone-up').value
     let emailInp=document.getElementById('email-up').value

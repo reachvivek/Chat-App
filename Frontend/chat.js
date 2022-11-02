@@ -1,6 +1,6 @@
 var state, group;
 let allChats;
-const chatUrl='http://localhost:3000/chats'
+const chatUrl='http://ec2-13-127-49-153.ap-south-1.compute.amazonaws.com:3000/chats'
 let backBtn=document.getElementById('back')
 let sendBtn=document.getElementById('send')
 let messageInp=document.getElementById('message')
